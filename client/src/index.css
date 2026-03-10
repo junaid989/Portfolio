@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #0a0e17;
+  font-family: 'Orbitron', system-ui, sans-serif;
+}
+
+canvas {
+  display: block;
+  outline: none;
+}
+
+/* Scrollbar for panels */
+.panel-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.panel-scroll::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.05);
+  border-radius: 3px;
+}
+.panel-scroll::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 249, 0.3);
+  border-radius: 3px;
+}
+
+/* Terminal cursor */
+.terminal-cursor::after {
+  content: '▌';
+  animation: blink 1s step-end infinite;
+  color: #39ff14;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
