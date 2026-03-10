@@ -1,17 +1,15 @@
 {
-  "name": "portfolio-3d",
+  "name": "portfolio-3d-server",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
-    "dev:client": "cd client && npm run dev",
-    "dev:server": "cd server && npm run dev",
-    "build": "cd client && npm run build",
-    "start": "cd server && npm run start",
-    "install:all": "npm install && cd client && npm install && cd ../server && npm install"
+    "dev": "node --watch index.js",
+    "start": "node index.js"
   },
-  "devDependencies": {
-    "concurrently": "^8.2.2"
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1"
   }
 }
